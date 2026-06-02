@@ -1,136 +1,178 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="atividade">
-  <title>Atividade</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Blog Pessoal - Matheus Soares Beraldo">
+  <title>Matheus Soares Beraldo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
   <style>
   :root {
-    --bg-light: #e6e6fa;
-    --accent: lightsalmon;
-    --accent-dark: #502c2c;
-    --nav-bg: #333;
-    --nav-link: #fff;
-    --nav-hover: #ffa;
+    --bg: #0c0a14;
+    --accent: #7b4fd4;
+    --accent-soft: #9b7cff;
+    --void-purple: #5e2a9e;
+    --gold: #c9b8f5;
+    --text: #d4c9f0;
+    --text-muted: #a090cc;
+    --nav-bg: #0a0812;
+    --border: #2a1f4a;
   }
 
-  * {
-    box-sizing: border-box;
-  }
+  * { box-sizing: border-box; }
 
   body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background: var(--bg-light);
+    background: var(--bg);
+    color: var(--text);
     scroll-behavior: smooth;
   }
 
   header {
     background: var(--nav-bg);
-    padding: 10px 20px;
+    padding: 14px 32px;
     position: sticky;
     top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    border-bottom: 1px solid var(--border);
   }
-
   header h1 {
-    color: #fff;
+    color: var(--gold);
     margin: 0;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
   }
-
   nav ul {
     display: flex;
-    gap: 20px;
+    gap: 24px;
     margin: 0;
     padding: 0;
+    list-style: none;
   }
-
   nav a {
-    color: var(--nav-link);
+    color: var(--text-muted);
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: color 0.2s;
   }
+  nav a:hover { color: var(--accent-soft); }
 
-  nav a:hover {
-    color: var(--nav-hover);
+  .hero {
+    text-align: center;
+    padding: 90px 24px 70px;
+    background: linear-gradient(180deg, #1a1430 0%, #0c0a14 70%);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero h2 {
+    font-size: clamp(1.7rem, 5.5vw, 2.4rem);
+    color: var(--gold);
+    margin: 0 0 14px;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(123, 79, 212, 0.5);
+  }
+  .hero p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 520px;
+    margin: 0 auto;
   }
 
   section {
-    padding: 40px 20px;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 24px;
+  }
+  section h2 {
+    font-family: 'Noto Serif JP', serif;
+    color: var(--accent-soft);
+    font-size: clamp(1.3rem, 4vw, 1.7rem);
+    margin: 0 0 32px;
+    text-align: center;
+    letter-spacing: 0.04em;
+  }
+
+  .content {
+    background: rgba(26, 20, 48, 0.65);
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid var(--void-purple);
+    box-shadow: 0 0 25px rgba(123, 79, 212, 0.15);
+  }
+
+  .content p {
+    line-height: 1.75;
+    margin: 16px 0;
+    color: var(--text-muted);
   }
 
   footer {
-    background: #222;
-    color: #ccc;
+    background: var(--nav-bg);
+    color: #6b5f8a;
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
+    border-top: 1px solid var(--border);
   }
 
-  button {
-    padding: 8px 12px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14pt;
-    transition: background 0.3s;
+  @media (max-width: 600px) {
+    header { padding: 12px 16px; flex-direction: column; gap: 12px; }
+    nav ul { gap: 16px; }
+    section { padding: 40px 16px; }
+    .hero { padding: 70px 16px 60px; }
   }
-
-  button:hover {
-    background: #ccc;
-  }
-</style>
+  </style>
 </head>
-
 <body>
+
   <header>
-    <h1>📚 Blog Pessoal</h1>
+    <h1>Matheus Soares Beraldo</h1>
     <nav>
       <ul>
-        <li><a href="#home">Início</a></li>
         <li><a href="#biography">Biografia</a></li>
-        <li><a href="#conhecimento">Conhecimento</a></li>
-        <li><a href="#hobbies">Meus hobbies</a></li>
+        <li><a href="#experiencia">Experiência</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="home" style="text-align:center; padding:40px 20px;">
-    <img src="https://i.pinimg.com/originals/c8/41/4e/c8414ecb036af8c978320a7da691ba9d.gif" alt="Banner GIF" style="max-width:100%; height:auto; display:block; margin:0 auto;">
-    <h2>Bem-vindo ao meu blog!</h2>
+  <div class="hero">
+    <h2>Blog</h2>
+  </div>
+
+  <section id="biography">
+    <h2>Biografia</h2>
+    <div class="content">
+      <p><strong>Nome:</strong> Matheus Soares Beraldo</p>
+      <p><strong>Idade:</strong> 19 anos</p>
+      <p><strong>Curso:</strong> Sistemas de Informação</p>
+    </div>
   </section>
 
-  <main>
-    <section id="biography" style="background-color: var(--accent);">
-      <h2>BIOGRAFIA</h2>
-      <p>Meu nome é Matheus Soares Beraldo.</p>
-      <p>Tenho 19 anos.</p>
-      <p>Atualmente curso Sistemas de Informação.</p>
-    </section>
+  <section id="experiencia">
+    <h2>Experiência</h2>
+    <div class="content">
+      <p><strong>Trabalho:</strong> Ainda sem experiência profissional.</p>
+      <p>Estudando programação.</p>
+      <p>Linguagens: C, Java, Python.</p>
+      
+      <p style="margin-top: 28px;">
+        <strong>Hobbies</strong><br>
+        <a href="hobbies.html" style="color: var(--accent-soft); text-decoration: none; font-weight: 700;">
+          → Meus Hobbies
+        </a>
+      </p>
+    </div>
+  </section>
 
-    <section id="conhecimento">
-      <h2>Experiência de Trabalho</h2>
-      <article style="background-color: lightblue;">
-        <h3 style="color: var(--accent-dark);">Nenhuma!</h3>
-        <p>Possuo algumas experiências como cursos de programação básica.</p>
-        <p>Nada muito profundo!</p>
-      </article>
-      <article style="background-color: lightpink;">
-        <h2><a href="hobbies.html">Conheça mais sobre meus hobbies! 💪</a></h2>
-      </article>
-    </section>
-  </main>
-  
-
-    <footer>
-      <p>&copy; 2026 Meu Blog! Todos os direitos reservados.</p>
-      <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Serviço</a></p>
-      <p>Eu ficaria feliz em receber sua opinião sobre este site</p>
-      <p><button>Excelente 👍</button> <button>Uma bosta 👎</button></p>
-    </footer>
+  <footer>
+    <p>&copy; 2026 Matheus Soares Beraldo • Todos os direitos reservados.</p>
+  </footer>
 
 </body>
-
 </html>
